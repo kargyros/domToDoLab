@@ -17,12 +17,29 @@ buttonElement.addEventListener('click', function (event){
   itemElement.value = ''
 })
 
+// --==Reset Button(remove all)==--
+
 resetButtonElement.addEventListener('click', function(event){
-//when reset button is clicked
-if (listElement.firstChild){
-return listElement.removeChild(listElement.firstChild)
-}
+  //when reset button is clicked
+  listElement.innerHTML = ''
+  itemElement.value = ''
+  })
+
+// --==remove item by click==--
+
+listElement.addEventListener('click', function (event){
+  const parentNode = event.target.parentNode
+  parentNode.removeChild(event.target)
 })
+
+
+
+// resetButtonElement.addEventListener('click', function(event){
+// when reset button is clicked
+// if (listElement.firstChild){
+// return listElement.removeChild(listElement.firstChild)
+// }
+// }) // this removes one li per click of reset button
 
 
 //practice again from scratch
